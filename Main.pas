@@ -28,7 +28,7 @@ begin
     else
       begin
         GoToXY(2, 22);
-        Writeln('Повторите ввод...');
+        Writeln('Ошибка! Повторите ввод...');
         delay(2000);
       end
     end

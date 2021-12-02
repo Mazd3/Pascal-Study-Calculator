@@ -18,8 +18,8 @@ function MixProd(x, y, z: Vector): real;
 procedure MultRVect(a: real; x: Vector; var z: Vector);
 procedure SubtVect(x, y: Vector; var z: Vector);
 function ModulVect(x: Vector): real;
-procedure InputV(x, y: integer; var z: Vector);
-procedure OutputV(x, y: integer; z: Vector);
+procedure InputVect(x, y: integer; var z: Vector);
+procedure OutputVect(x, y: integer; z: Vector);
 procedure MenuRealVect;
 
     implementation
@@ -76,7 +76,7 @@ begin
   ModulVect := sqrt(ScalProd(x, x));
 end;
 
-procedure InputV(x, y: integer; var z: Vector);
+procedure InputVect(x, y: integer; var z: Vector);
 var
   i: integer;
 begin
@@ -88,7 +88,7 @@ begin
   GoToXY(x + 3 * nv + 1, y); writeln(')');
 end;
 
-procedure OutputV(x, y: integer; z: Vector);
+procedure OutputVect(x, y: integer; z: Vector);
 var
   i: integer;
 begin
@@ -132,16 +132,16 @@ begin
     case Mode of
       1: 
         begin
-          InputV(5, 10, x);
-          InputV(5, 15, y);
+          InputVect(5, 10, x);
+          InputVect(5, 15, y);
           AddVect(x, y, z);
-          OutputV(5, 20, z);
+          OutputVect(5, 20, z);
           Wait;
         end;
       2: 
         begin
-          InputV(5, 10, x);
-          InputV(5, 15, y);
+          InputVect(5, 10, x);
+          InputVect(5, 15, y);
           f := ScalProd(x, y);
           GoToXY(5, 20);
           writeln(f);
@@ -149,17 +149,17 @@ begin
         end;
       3: 
         begin
-          InputV(5, 10, x);
-          InputV(5, 15, y);
+          InputVect(5, 10, x);
+          InputVect(5, 15, y);
           VectProd(x, y, z);
-          OutputV(5, 20, z);
+          OutputVect(5, 20, z);
           Wait;
         end;
       4: 
         begin
-          InputV(5, 10, x);
-          InputV(5, 15, y);
-          InputV(5, 20, z);
+          InputVect(5, 10, x);
+          InputVect(5, 15, y);
+          InputVect(5, 20, z);
           w := MixProd(x, y, z);
           GoToXY(5, 25);
           writeln(w);
@@ -168,22 +168,22 @@ begin
       5: 
         begin
           readln(f);
-          InputV(5, 10, x);
+          InputVect(5, 10, x);
           MultRVect(f, x, z);
-          OutputV(5, 15, z);
+          OutputVect(5, 15, z);
           Wait;
         end;
       6: 
         begin
-          InputV(5, 10, x);
-          InputV(5, 15, y);
+          InputVect(5, 10, x);
+          InputVect(5, 15, y);
           SubtVect(x, y, z);
-          OutputV(5, 20, z);
+          OutputVect(5, 20, z);
           Wait;
         end;
       7: 
         begin
-          InputV(5, 10, x);
+          InputVect(5, 10, x);
           f := ModulVect(x);
           GoToXY(5, 15);
           writeln(f);

@@ -18,8 +18,8 @@ function MixProdCompVect(x, y, z: CompV): Complex;
 procedure ScalMultCompVect(a: real; x: CompV; var z: CompV);
 procedure SubtCompVect(x, y: CompV; var z: CompV);
 function ModulCompVect(x: CompV): real;
-procedure InputCompV(x, y: integer; var z: CompV);
-procedure OutputCompV(x, y: integer; z: CompV);
+procedure InputCompVect(x, y: integer; var z: CompV);
+procedure OutputCompVect(x, y: integer; z: CompV);
 procedure MenuCompVect;
 
     implementation
@@ -90,7 +90,7 @@ begin
   ModulCompVect := s;
 end;
 
-procedure InputCompV(x, y: integer; var z: CompV);
+procedure InputCompVect(x, y: integer; var z: CompV);
 var
   i: integer;
 begin
@@ -101,7 +101,7 @@ begin
   end;
 end;
 
-procedure OutputCompV(x, y: integer; z: CompV);
+procedure OutputCompVect(x, y: integer; z: CompV);
 var
   i: integer;
 begin
@@ -143,33 +143,33 @@ begin
     case Mode of
       1: 
         begin
-          InputCompV(10, 10, x);
-          InputCompV(10, 15, y);
+          InputCompVect(10, 10, x);
+          InputCompVect(10, 15, y);
           AddCompVect(x, y, z);
-          OutputCompV(10, 20, z);
+          OutputCompVect(10, 20, z);
           Wait;
         end;
       2: 
         begin
-          InputCompV(10, 10, x);
-          InputCompV(10, 15, y);
+          InputCompVect(10, 10, x);
+          InputCompVect(10, 15, y);
           f := ScalProdCompVect(x, y);
           Output(10, 20, f);
           Wait;
         end;
       3: 
         begin
-          InputCompV(10, 10, x);
-          InputCompV(10, 15, y);
+          InputCompVect(10, 10, x);
+          InputCompVect(10, 15, y);
           ProdCompVect(x, y, z);
-          OutputCompV(10, 20, z);
+          OutputCompVect(10, 20, z);
           Wait;
         end;
       4: 
         begin
-          InputCompV(10, 10, x);
-          InputCompV(10, 15, y);
-          InputCompV(10, 20, z);
+          InputCompVect(10, 10, x);
+          InputCompVect(10, 15, y);
+          InputCompVect(10, 20, z);
           w := MixProdCompVect(x, y, z);
           Output(10, 30, w);
           Wait;
@@ -178,22 +178,22 @@ begin
         begin
           GoToXY(10, 10);
           readln(b);
-          InputCompV(10, 15, x);
+          InputCompVect(10, 15, x);
           ScalMultCompVect(b, x, z);
-          OutputCompV(10, 20, z);
+          OutputCompVect(10, 20, z);
           Wait;
         end;
       6: 
         begin
-          InputCompV(10, 10, x);
-          InputCompV(10, 15, y);
+          InputCompVect(10, 10, x);
+          InputCompVect(10, 15, y);
           SubtCompVect(x, y, z);
-          OutputCompV(10, 20, z);
+          OutputCompVect(10, 20, z);
           Wait;
         end;
       7: 
         begin
-          InputCompV(10, 10, x);
+          InputCompVect(10, 10, x);
           b := ModulCompVect(x);
           GoToXY(10, 15); 
           writeln(b);
