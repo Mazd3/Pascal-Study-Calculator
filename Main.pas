@@ -1,5 +1,5 @@
 ﻿uses
-  crt, Compl, CompMatr, RealVect, CompVect;
+  crt, Compl, CompMatr, RealVect, CompVect, Stacks;
 
 var
   Mode: integer; Ok: boolean;
@@ -13,7 +13,8 @@ begin
     writeln('  1.Комплексные числа');
     writeln('  2.Комплексные матрицы');
     writeln('  3.Вещественные вектора');
-    writeln('  4.Комплексные вектора'); 
+    writeln('  4.Комплексные вектора');
+    writeln('  5.Стеки');
     Writeln('  0.Выход');
     GoToXY(2, 22);
     Readln(Mode);
@@ -24,6 +25,7 @@ begin
       2: MenuCompMatr;
       3: MenuRealVect;
       4: MenuCompVect;
+      5: MenuStack;
       0: Ok := False;
     else
       begin
