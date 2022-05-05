@@ -41,7 +41,7 @@ begin
  while Ok do
   begin
    ClrScr;
-   writeln('Выберите пункт');
+   writeln(' Выберите пункт');
    writeln('  1. Ввести стек');
    writeln('  2. Добавить элементы к стеку');
    writeln('  3. Ввести второй стек и присоединить к первому');
@@ -50,7 +50,7 @@ begin
    writeln('  6. Удалить стек');
    writeln('  7. Перевод из стека в очередь');
    writeln('  8. Просмотр стека');
-   writeln('  0. Вернуться');
+   writeln('  0. Выход');
    readln(Mode);
     case Mode of
      1:begin ClrScr; MakeStack(Top1); ClrScr; ViewStack(Top1); Wait end;
