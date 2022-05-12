@@ -1,5 +1,5 @@
 ﻿uses
-  crt, Stacks, Files, FilesT, Groups, Queues, Trees;
+  crt, Stacks, Files, FilesT, Groups, Queues, Tree, BinTree;
 
 var
   Mode: integer; Ok: boolean;
@@ -16,6 +16,7 @@ begin
     writeln('  4.Файлы');
     writeln('  5.Текстовые Файлы');
     writeln('  6.Дерево');
+    writeln('  7.Бинарное дерево');
     Writeln('  0.Выход');
     GoToXY(2, 22);
     Readln(Mode);
@@ -27,7 +28,8 @@ begin
       3: MenuGroup;
       4: MenuFiles;
       5: MenuFilesT;
-      6: MenuTrees;
+      6: MenuTree;
+      7: MenuBinTree;
       0: Ok := False;
     else
       begin
