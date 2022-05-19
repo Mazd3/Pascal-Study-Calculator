@@ -3,8 +3,8 @@ Interface
 Uses Crt;  
 Type NodePtr = ^Node;
      Node = record
-     Key:byte;
-     Left,Right:NodePtr;
+     Key: byte;
+     Left, Right: NodePtr;
      end;
 
 Var Top,Root:NodePtr; Level:byte;
@@ -105,7 +105,7 @@ Procedure MakeNode(NewKey:byte; Var Top:NodePtr);
       Top^.Left:=Nil; Top^.Right:=Nil;
     end
     else
-      if NewKey<Top^.Key then
+      if NewKey < Top^.Key then
         MakeNode(NewKey, Top^.Left)
       else
         MakeNode(NewKey, Top^.Right);
